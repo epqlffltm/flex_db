@@ -1,0 +1,15 @@
+#.gitignore
+
+.vscode/
+bin/
+
+# 오브젝트 파일
+*.o
+
+# 코어 덤프
+core
+
+# 실행 파일 (추가)
+flex_db
+*.exe
+*.out
