@@ -12,11 +12,11 @@ flex_db ver1
 
 int add_book(char *book_name, char *auto_name, char *publ_name);
 
-void search_book(void);
+void search_book(char *book_name, char *auto_name, char *publ_name);
 
-void rent_book(void);
+void rent_book(char *book_name, char *auto_name, char *publ_name);
 
-void return_book(void);
+void return_book(char *book_name, char *auto_name, char *publ_name);
 
 // -----------------------------------------------------------
 // 메인 함수
@@ -63,15 +63,15 @@ int main(void)
       break;
       
       case 2:
-      search_book();
+      search_book(book_name, auto_name, publ_name);
       break;
       
       case 3:
-      rent_book();
+      rent_book(book_name, auto_name, publ_name);
       break;
       
       case 4:
-      return_book();
+      return_book(book_name, auto_name, publ_name);
       break;
       
       case 5:
@@ -106,17 +106,17 @@ int add_book(char *book_name, char *auto_name, char *publ_name)
   return 0; // 성공 시 0 반환
 }
 
-void search_book(void)
+void search_book(char *book_name, char *auto_name, char *publ_name)
 {
   printf("[디버깅] 책 검색 기능 호출\n");
 }
 
-void rent_book(void)
+void rent_book(char *book_name, char *auto_name, char *publ_name)
 {
   printf("[디버깅] 책 대여 기능 호출\n");
 }
 
-void return_book(void)
+void return_book(char *book_name, char *auto_name, char *publ_name)
 {
   printf("[디버깅] 책 반납 기능 호출\n");
 }
