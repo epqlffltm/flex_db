@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "app_runner.h"
-#include "book_features.h" // Level 1의 기능을 여기서 불러옵니다.
+#include "book_features.h" // Level 1호출
+
+#define NAME 30
 
 void run_program(void) {
   int n = 0; // 유저가 선택한 메뉴
+  int result = 0;//에러 처리용
+
+  char book_name[NAME], auto_name[NAME], publ_name[NAME];//책이름, 저자, 출판사
 
   while (true)
   {
@@ -28,7 +33,7 @@ void run_program(void) {
     switch (n)
     {
       case 1:
-      add_book(); // book_features의 함수 호출
+      result = add_book(&book_name, &auto_name, &publ_name); // book_features의 함수 호출
       break;
       
       case 2:
